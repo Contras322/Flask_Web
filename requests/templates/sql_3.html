@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask course</title>
+    <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<style>
+    .text-style{
+        text-align: center;
+    }
+
+    body{
+        background-color: azure;
+    }
+
+    button{
+        background-color: #FFCF73;
+    }
+
+    .heading{
+        display: block;
+        font-size: 35px;
+        font-weight: 700;
+        padding: 35px 0;
+        border-bottom: 1px solid #f0f0f0;
+        margin-bottom: 30px;
+    }
+</style>
+<body class="text-style">
+<span class="heading"><font face="Times New Roman" color="#090974">Показать название товара, который не поставлялся в этом году</font></span>
+
+<form class="form-inline" action="" method="post">
+    <div class="form-group">
+    <br>
+        <input type="text" style="width: 300px; height: 40px" class="form-control" placeholder="Год" name="value1">
+        <button type="submit" style="height: 40px" class="btn btn-primary"> <font face="Times New Roman" color="white">Отправить</font></button>
+    <br>
+    <br><br>
+        <button type="button" class="btn btn-danger"><a href="{{url_for('user_app.user_index')}}"> <font size="5" face="Times New Roman" color="white">Вернуться назад</font></a></button>
+    </div>
+</form>
+
+</body>
+</html>

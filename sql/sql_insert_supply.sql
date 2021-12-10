@@ -1,0 +1,1 @@
+insert into storage.supply(sy_date, s_id, basket_id) values ('$date', $s_id, $basket_id);

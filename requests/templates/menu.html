@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Выберите запрос</title>
+    <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<style>
+    .text-style{
+        text-align: center;
+        color
+    }
+
+    .btn {
+        border-radius: 100px;
+        font-size: 13px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        padding: 17px 39px;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.14);
+        text-transform: uppercase;
+        box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    body{
+        background-color: azure;
+    }
+
+    button{
+        background-color: #FFCF73;
+    }
+
+    .heading{
+        display: block;
+        font-size: 35px;
+        font-weight: 700;
+        padding: 35px 0;
+        border-bottom: 1px solid #f0f0f0;
+        margin-bottom: 30px;
+    }
+</style>
+<body class="text-style">
+     <span class="heading"><font face="Times New Roman" color="#090974">МЕНЮ ЗАПРОСОВ</font></span>
+
+    <div class="btn-group-vertical">
+        <button type="button" class="btn btn-outline-dark text-style"><a href="{{url_for('user_app.user_sql1')}}"><font size="4" face="Times New Roman" color="#412C84">  Показать шифры и названия товаров, поставленные в 2013 году</font>  </a></button>
+    <br>
+        <button type="button" class="btn btn-outline-dark text-style"><a href="{{url_for('user_app.user_sql2')}}"><font size="4" face="Times New Roman" color="#412C84">Показать название поставщика самого дешевого товара</font></a></button>
+    <br>
+        <button type="button" class="btn btn-outline-dark text-style"><a href="{{url_for('user_app.user_sql3')}}"> <font size="4" face="Times New Roman" color="#412C84">Показать название товара, который не поставлялся в этом году</font></a></button>
+    <br>
+        <button type="button" class="btn btn-outline-dark text-style"><a href="{{url_for('index')}}"> <font size="4" face="Times New Roman" color="#412C84">Вернуться назад</font></a></button>
+    </div>
+
+</body>
+</html>

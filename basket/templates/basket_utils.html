@@ -1,0 +1,27 @@
+{% macro render_item(item, show_form=False) %}
+<div class="card text-dark bg-light mb-3" style="border-style: solid">
+    <p>
+        <h5 class="card-title">Название товара: {{ item['p_name']}}</h5>
+    <div class="card-body">
+            <span><strong>Материал:</strong> {{ item['p_material']}}</span>
+            <br>
+            <span><strong>Единица измерения:</strong> {{ item['p_measure']}}</span>
+            <br>
+            <span><strong>Категория:</strong> {{ item['p_category']}}</span>
+            {% if item['count'] %}
+                <br>
+                <span><strong>Количество:</strong> {{ item['count']}}</span>
+            {% endif %}
+    </div>
+
+    </p>
+    {% if show_form %}
+    <div>
+     <form action="" method="post">
+        <input type="hidden" name="p_id" value="{{item['p_id']}}">
+         <input type="submit" class="b1"  value="Добавить в корзину">
+    </form>
+    </div>
+    {% endif %}
+</div>
+{% endmacro %}

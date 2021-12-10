@@ -1,0 +1,1 @@
+select s_id, s_name from storage.supplier

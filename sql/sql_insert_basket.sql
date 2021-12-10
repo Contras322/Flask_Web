@@ -1,0 +1,1 @@
+insert into storage.basket(basket_id, p_id, count) values ($b_id, $p_id, $count);

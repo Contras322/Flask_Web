@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        .main-table{
+            border: 2px solid black;
+            padding: 5px 10px;
+        }
+
+        body{
+            background-color: azure;
+        }
+
+        table{
+            background-color: white;
+        }
+
+        button{
+            background-color: #FFCF73;
+        }
+
+        .text-style{
+            text-align: center;
+            width: 50%;
+            margin: 0 auto !important;
+        }
+
+        .heading{
+            display: block;
+            font-size: 35px;
+            font-weight: 700;
+            padding: 35px 0;
+            border-bottom: 1px solid #f0f0f0;
+            margin-bottom: 30px;
+        }
+
+    </style>
+</head>
+<body class="text-style">
+     <span class="heading"><font face="Times New Roman" color="#090974">Поставка № {{ number }} оформлена! Ваша поставка:</font></span>
+
+    <table style="width: 30%;" class="table table-bordered text-center text-style">
+        <thead>
+            <tr class="success">
+                {% for i in name%}
+                    <th class="text-center">{{i}}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+
+        <tbody>
+        {% for item in items %}
+        <tr>
+            <td>{{item['p_name']}}</td>
+            <td>{{item['count']}}</td>
+            <td>{{item['p_price']}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <br><br>
+
+    <div class="text-style">
+        <button type="button button-back" class="btn btn-danger"><a href="{{url_for('index')}}"> <font size="5" face="Times New Roman" color="white">Вернуться в главное меню</font></a></button>
+    </div>
+</body>
+
+</html>
